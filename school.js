@@ -143,6 +143,9 @@ function arrangement() {
 
     console.log(fuga.length);           // 配列の長さ
     console.log(fuga[fuga.length - 1]); // 配列の最後
+
+    const fugaga = [...fuga, 'hoge', 'piyo'];
+    console.log(fugaga);
 }
 
 

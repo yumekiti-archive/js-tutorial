@@ -12,13 +12,19 @@
 <script src="./school.js"></script>
 <script src="./main.js"></script>
 <script>
-    document.getElementById("main").style.display = "none";
+    if(sessionStorage.getItem('page') == 'school'){
+        document.getElementById("main").style.display = "none";
+    }else{
+        document.getElementById("school").style.display = "none";
+    }
 
     document.getElementById("btn-school").onclick = function() {
+        sessionStorage.setItem('page', 'school');
         document.getElementById("school").style.display = "";
         document.getElementById("main").style.display = "none";
     };
     document.getElementById("btn-main").onclick = function() {
+        sessionStorage.setItem('page', 'main');
         document.getElementById("school").style.display = "none";
         document.getElementById("main").style.display = "";
     };

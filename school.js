@@ -3,7 +3,7 @@ main();
 function main() {
     logDisplay();   // コンソールの表示をHTMLに入れる
     calc();         // 計算
-    typeCheck();    // データ型
+    dataType();    // データ型
     variable();     // 変数・定数
     condition();    // 条件分岐 if文 switch文
     repetition();   // 繰り返し while文
@@ -34,11 +34,14 @@ function calc() {
     console.log('2 × 2 = ' + (2 * 2));  // 掛け算
     console.log('2 ÷ 1 = ' + (2 / 1));  // 割り算
     console.log('3 ÷ 2 = ' + (3 / 2 | 0) + '余り' + (3 % 2)); // 余り
+    
+    // カッコ内が優先される 以下一行の右側(123 - 123)
+    console.log(123 + (234 - 234));
 }
 
 
 // データ型
-function typeCheck() {
+function dataType() {
     console.log('');
     console.log('<span>データ型</span>');
 

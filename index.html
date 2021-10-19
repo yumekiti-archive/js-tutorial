@@ -3,16 +3,31 @@
         <meta charset="utf-8"/>
     </header>
     <body>
-        <div id="console_log"></div>
+        <button id="btn-school">school</button>
+        <button id="btn-main">main</button>
+        <div id="school"></div>
+        <div id="main"></div>
     </body>
 </html>
 <script src="./script.js"></script>
+<script>
+    document.getElementById("main").style.display = "none";
+
+    document.getElementById("btn-school").onclick = function() {
+        document.getElementById("school").style.display = "";
+        document.getElementById("main").style.display = "none";
+    };
+    document.getElementById("btn-main").onclick = function() {
+        document.getElementById("school").style.display = "none";
+        document.getElementById("main").style.display = "";
+    };
+</script>
 
 <style>
 span {
     color: #FFA500;
 }
-div {
+body {
     margin: 5% 20%;
 }
 </style>

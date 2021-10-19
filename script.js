@@ -19,7 +19,7 @@ function main() {
 // コンソールをhtmlのdivへ
 function logDisplay() {
     console.log = function (log) {
-        document.getElementById('console_log').innerHTML += log + "<br>";
+        document.getElementById('school').innerHTML += log + "<br>";
     }
 }
 

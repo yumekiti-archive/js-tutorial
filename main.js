@@ -485,7 +485,7 @@ console.log('------------------');
 // アロー関数
 function arrowFunction() {
     console.log('');
-    console.log('<span>関数式</span>');
+    console.log('<span>アロー関数</span>');
 
     let sum = (a, b) => a + b;
 

@@ -497,10 +497,10 @@ function arrowFunction() {
 
 console.log('------------------');
 
-    let sum = (a, b) => {  // 波括弧を使って複数行の関数を書けます
+    let calcsum = (a, b) => {  // 波括弧を使って複数行の関数を書けます
         let result = a + b;
         return result; // 波括弧を使う場合、明示的な return が必要です
     };
 
-    console.log(sum(1, 2));
+    console.log(calcsum(1, 2));
 }

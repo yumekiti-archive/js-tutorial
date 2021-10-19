@@ -13,10 +13,12 @@ function main() {
     nullCoalescingOperator();   // null合体演算子
     repetition();   // 繰り返し
     functions();    // 関数
+    functionExpression();       // 関数式
+    arrowFunction();// アロー関数
 }
 
 
-//----------------------------------------------------------
+// -------------------------------------------------------
 
 
 // コンソールをhtmlのdivへ
@@ -27,7 +29,7 @@ function logDisplay() {
 }
 
 
-//----------------------------------------------------------
+// -------------------------------------------------------
 
 
 // 変数・定数
@@ -39,7 +41,7 @@ function variable() {
 }
 
 
-//----------------------------------------------------------
+// -------------------------------------------------------
 
 
 // データ型
@@ -47,42 +49,40 @@ function dataType() {
     console.log('');
     console.log('<span>データ型</span>');
 
-//---------------------
-
     // 数値
     let n = 123;
     // 計算して表示
     console.log('数値 -> ' + n + 377);
 
-//---------------------
+console.log('------------------');
 
     // BigInt
     // 9007199254740991以上の数値
     const bigInt = 1234567890123456789012345678901234567890n;
     console.log('BigInt -> ' + bigInt);
 
-//---------------------
+console.log('------------------');
 
     // 文字列
     let name = "name";
     // 変数表示
     console.log('文字列 -> ' + `Hello, ${name}`);
 
-//---------------------
+console.log('------------------');
 
     // boolean(論理型)
     // boolean型は2つの値だけを持つことができる true と false
     let check = true;
     console.log('bool値 -> ' + check);
 
-//---------------------
+console.log('------------------');
 
     // "null" 値
     // 空な値を入れることができる
     let age = null;
     console.log('null値 -> ' + age);
 
-//---------------------
+console.log('------------------');
 
     // "undefined" 値
     let x;
@@ -90,15 +90,13 @@ function dataType() {
 }
 
 
-//----------------------------------------------------------
+// -------------------------------------------------------
 
 
 // 型変換 キャスト
 function cast() {
     console.log('');
     console.log('<span>型変換 キャスト</span>');
-
-//---------------------
 
     let kazu = "123"
     
@@ -110,17 +108,16 @@ function cast() {
     console.log('変数kazuを数字に変更します ' + kazu);
     console.log(typeof Number(kazu));
 
-//---------------------
+console.log('------------------');
 
     let bool = 1;
 
     console.log('変数boolは' + bool + 'です');
     
     // 1はtrue 0はfalse
+    // Booleanに変更します
     console.log('Booleanに変更します');
     console.log(Boolean(bool));
-
-//---------------------
 
     // その他キャストできる型
     // Number（数値型）
@@ -131,7 +128,7 @@ function cast() {
 }
 
 
-//----------------------------------------------------------
+// -------------------------------------------------------
 
 
 // 演算子
@@ -145,7 +142,7 @@ function operator() {
 }
 
 
-//----------------------------------------------------------
+// -------------------------------------------------------
 
 
 // 比較
@@ -173,7 +170,7 @@ function comparison() {
 }
 
 
-//----------------------------------------------------------
+// -------------------------------------------------------
 
 
 // 条件分岐 if
@@ -181,21 +178,20 @@ function conditionalBrancIf() {
     console.log('');
     console.log('<span>条件分岐 if</span>');
 
-//---------------------
-
     let bool = 0;
     let mozi = "asd";
 
     console.log('bool is ' + bool);
     console.log('mozi is ' + mozi);
 
+    // 文字があるか
     if(mozi) {
         console.log('変数moziは1文字以上あります。');
     }else {
         console.log('変数moziは空です');
     }
 
-//---------------------
+console.log('------------------');
 
     // if文は括弧の中の式を評価し、Boolean型に変換します。
     if(bool) {
@@ -206,7 +202,7 @@ function conditionalBrancIf() {
         console.log('boolは偽です。');
     }
 
-//---------------------
+console.log('------------------');
 
     let age = 14; // 年齢
 
@@ -219,12 +215,11 @@ function conditionalBrancIf() {
 
     // ?複数
     hoge ? console.log('18歳以上です') :
-    // false
     bool ? console.log('18未満でboolがtrueです') : console.log('18未満でboolがfalseです');
 }
 
 
-//----------------------------------------------------------
+// -------------------------------------------------------
 
 
 // 条件分岐 switch
@@ -253,7 +248,7 @@ function conditionalBrancSwitch() {
 }
 
 
-//----------------------------------------------------------
+// -------------------------------------------------------
 
 
 // 論理演算子
@@ -267,24 +262,24 @@ function logicalOperator() {
     console.log('a is ' + a);
     console.log('b is ' + b);
 
-//---------------------
+console.log('------------------');
 
     // OR文
     console.log('aかbがtrueなら true -> ' + (a || b));
 
-//---------------------
+console.log('------------------');
 
     // AND文
     console.log('aとbがtrueなら true -> ' + (a && b));
 
-//---------------------
+console.log('------------------');
 
     // NOT文
     console.log('trueなら false -> ' + (!a))
 }
 
 
-//----------------------------------------------------------
+// -------------------------------------------------------
 
 
 // null合体演算子
@@ -303,15 +298,13 @@ function nullCoalescingOperator() {
 }
 
 
-//----------------------------------------------------------
+// -------------------------------------------------------
 
 
 // 繰り返し
 function repetition() {
     console.log('');
     console.log('<span>繰り返し</span>');
-
-//---------------------
 
     // while文
     console.log('while文');
@@ -321,7 +314,7 @@ function repetition() {
         console.log(i);
     }
     
-//---------------------
+console.log('------------------');
 
     // do while文
     console.log('do while文');
@@ -331,7 +324,7 @@ function repetition() {
         console.log( i );
     } while (i < 3);
     
-//---------------------
+console.log('------------------');
 
     // for文
     console.log('for文');
@@ -339,7 +332,7 @@ function repetition() {
         console.log(i);
     }
 
-//---------------------
+console.log('------------------');
 
     // for文省略・break
     console.log('for文 省略');
@@ -349,7 +342,7 @@ function repetition() {
         if(i == 2) break; //breakでループ終了
     }
 
-//---------------------
+console.log('------------------');
     
     // イテレーション
     console.log('イテレーション');
@@ -361,7 +354,7 @@ function repetition() {
 }
 
 
-//----------------------------------------------------------
+// -------------------------------------------------------
 
 
 // 関数
@@ -369,8 +362,7 @@ function functions() {
     console.log('');
     console.log('<span>関数</span>');
 
-//---------------------
-
+    // 関数のみ
     function test() {
         console.log('hello function');
     }
@@ -378,7 +370,7 @@ function functions() {
     test();
     test();
 
-//---------------------
+console.log('------------------');
 
     // ローカル変数
     function showMessage() {
@@ -389,7 +381,7 @@ function functions() {
     showMessage();
     // console.log(message); // エラー
 
-//---------------------
+console.log('------------------');
 
     // 外部変数
     let userName = 'John';
@@ -400,5 +392,115 @@ function functions() {
     }
 
     todokeMessage();
-    
+
+console.log('------------------');
+
+    // 引数
+    function parameter(hoge, fuga) {
+        console.log('hoge is ' + hoge);
+        console.log('fuga is ' + fuga);
+        console.log('文字連結 ' + (hoge + fuga));
+    } 
+
+    parameter('hogehoge', 'fugafuga');
+    parameter('fugafuga', 'hogehoge');
+
+console.log('------------------');
+
+    // デフォルト値
+    function defaultFunc(hoge, fuga = 'default') {
+        console.log('hoge + fuga = ' + (hoge + fuga));
+    }
+
+    defaultFunc('hoge');
+    defaultFunc('hoge', 'fuga');
+
+console.log('------------------');
+
+    function returnOfValue() {
+        return 123;
+    }
+
+    console.log(returnOfValue());
+
+    function sum(a, b) {
+        const num = a + b;
+        return num;
+    }
+
+    console.log('10 + 11 = ' + sum(10, 11));
+
+console.log('------------------');
+
+    function getAge(){
+        return 18;
+    }
+
+    console.log(getAge());
+
+    // showMessage(..)     // メッセージを表示します
+    // getAge(..)          // 年齢を返します(なんとかしてその値を得る)
+    // calcSum(..)         // 合計を計算し、それを返します
+    // createForm(..)      // フォームを生成します(通常それを返却します)
+    // checkPermission(..) // 権限をチェックし、true/false を返します
+
+}
+
+
+// -------------------------------------------------------
+
+
+// 関数式
+function functionExpression() {
+    console.log('');
+    console.log('<span>関数式</span>');
+
+    // 関数宣言
+    function sayHi_1() {
+        console.log("Hello_sayHi_1");
+    }
+    sayHi_1();
+
+    // 関数式
+    let sayHi_2 = function() {
+        console.log("Hello_sayHi_2");
+    };
+    sayHi_2();
+
+console.log('------------------');
+
+    function sayHi_3() {
+        return "Hello_sayHi_3";
+    }
+
+    const say_3 = sayHi_3();
+    console.log(say_3);
+
+}
+
+
+// アロー関数
+function arrowFunction() {
+    console.log('');
+    console.log('<span>関数式</span>');
+
+    let sum = (a, b) => a + b;
+
+    /* アロー関数は次よりも短い形式です:
+
+    let sum = function(a, b) {
+        return a + b;
+    };
+    */
+
+    console.log(sum(1, 2));
+
+console.log('------------------');
+
+    let sum = (a, b) => {  // 波括弧を使って複数行の関数を書けます
+        let result = a + b;
+        return result; // 波括弧を使う場合、明示的な return が必要です
+    };
+
+    console.log(sum(1, 2));
 }
